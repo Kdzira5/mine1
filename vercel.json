@@ -2,7 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/*.js",
+      "src": "api/sendData.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "api/getData.js",
       "use": "@vercel/node"
     }
   ],
