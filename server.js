@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Обработка POST запроса (отправка данных)
-app.post('/api/sendData', (req, res) => {
+app.post('https://kdzira5.github.io/mine1/api/sendData', (req, res) => {
     const data = req.body;
     console.log("Полученные данные:", data);
 
@@ -15,7 +15,7 @@ app.post('/api/sendData', (req, res) => {
 });
 
 // Обработка GET запроса (получение данных)
-app.get('/api/getData', (req, res) => {
+app.get('https://kdzira5.github.io/mine1/api/getData', (req, res) => {
     // Здесь можно вернуть какие-то данные для мода
     res.status(200).json({ message: 'Информация о моде' });
 });
