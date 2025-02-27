@@ -1,6 +1,6 @@
 // /api/get1.js
 
-const server = require('/server'); // Импортируем переменную и функции из server.js
+const server = require('../server'); // Импортируем переменную и функции из server.js
 
 module.exports = (req, res) => {
   try {
