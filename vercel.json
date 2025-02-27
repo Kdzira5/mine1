@@ -1,47 +1,17 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/sendData.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/get1.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/set1.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/getData.js",
-      "use": "@vercel/node"
-    }
+  "version":2,
+  "builds":[
+    {"src":"api/sendData.js","use":"@vercel/node"},
+    {"src":"api/get1.js","use":"@vercel/node"},
+    {"src":"api/set1.js","use":"@vercel/node"},
+    {"src":"server.js","use":"@vercel/node"},
+    {"src":"api/getData.js","use":"@vercel/node"}
   ],
-  "routes": [
-    {
-      "src": "/api/getData",
-      "dest": "/api/getData.js"
-    },
-    {
-      "src": "/api/set1",
-      "dest": "/api/set1.js"
-    },
-    {
-      "src": "/api/get1",
-      "dest": "/api/get1.js"
-    },
-    {
-      "src": "/api/sendData",
-      "dest": "/api/sendData.js"
-    },
-    {
-      "src": "/server",
-      "dest": "/server.js"
-    }
+  "routes":[
+    {"src":"/api/getData","dest":"/api/getData.js"},
+    {"src":"/api/set1","dest":"/api/set1.js"},
+    {"src":"/api/get1","dest":"/api/get1.js"},
+    {"src":"/api/sendData","dest":"/api/sendData.js"},
+    {"src":"/server","dest":"/server.js"}
   ]
 }
