@@ -6,10 +6,6 @@
       "use": "@vercel/node"
     },
     {
-      "src": "api/getData.js",
-      "use": "@vercel/node"
-    },
-    {
       "src": "api/get1.js",
       "use": "@vercel/node"
     },
@@ -22,10 +18,6 @@
     {
       "src": "/api/sendData",
       "dest": "/api/sendData.js"
-    },
-    {
-      "src": "/api/getData",
-      "dest": "/api/getData.js"
     },
     {
       "src": "/api/get1",
