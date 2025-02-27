@@ -1,15 +1,16 @@
-// /api/get1.js
+// /api/getData.js
 
-// Импортируем переменную и функции из server.js
-const server=require('./server');
+module.exports = (req, res) => {
+  // Логика обработки GET-запроса
+  const responseData = {
+    message: 'Информация о моде',
+    modDetails: {
+      name: 'Minecraft Mod',
+      description: 'Мод для Minecraft, добавляющий новые возможности!',
+      version: '1.0.0',
+    },
+  };
 
-const mongoose=require('mongoose');
-
-module.exports=(req,res)=>{
-
-  //Если вы хотите использовать данные из глобальной переменной:
-  const data=server.storedData;//Получаем данные из глобальной переменной
-  
-  //Отправляем данные в ответе
-  res.status(200).json({ message:'Данные успешно получены',storedData:data});
+  // Отправляем данные в виде JSON-ответа
+  res.status(200).json(responseData);
 };
