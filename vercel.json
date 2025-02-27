@@ -10,6 +10,10 @@
       "use": "@vercel/node"
     },
     {
+      "src": "api/set1.js",
+      "use": "@vercel/node"
+    },
+    {
       "src": "server.js",
       "use": "@vercel/node"
     },
@@ -22,6 +26,10 @@
     {
       "src": "/api/getData",
       "dest": "/api/getData.js"
+    },
+    {
+      "src": "/api/set1",
+      "dest": "/api/set1.js"
     },
     {
       "src": "/api/get1",
