@@ -12,16 +12,24 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "api/getData.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/sendData",
-      "dest": "/api/sendData.js"
+      "src": "/api/getData",
+      "dest": "/api/getData.js"
     },
     {
       "src": "/api/get1",
       "dest": "/api/get1.js"
+    },
+    {
+      "src": "/api/sendData",
+      "dest": "/api/sendData.js"
     },
     {
       "src": "/server",
