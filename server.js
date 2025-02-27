@@ -2,8 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-// Для парсинга JSON запросов
-app.use(bodyParser.json());
+app.use(express.json());  // Для обработки JSON в теле запроса
+
 
 // Создаем глобальную переменную для хранения данных
 let storedData = "Initial data";
