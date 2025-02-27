@@ -15,7 +15,7 @@ app.post('/api/setData', (req, res) => {
 });
 
 // Обработка GET запроса для получения данных
-app.get('/api/getData', (req, res) => {
+app.get('/apii/getData', (req, res) => {
   res.status(200).json({ message: 'Данные получены', storedData });
 });
 
