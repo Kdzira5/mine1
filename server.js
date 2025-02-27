@@ -16,7 +16,10 @@ module.exports.setData = (newData) => {
   storedData = newData;
 };
 
-
+// Функция для получения текущих данных
+module.exports.getData=()=>{
+  return storedData;//Возвращаем текущее значение переменной
+};
 
 // Запуск сервера
 const PORT = process.env.PORT || 3000;
