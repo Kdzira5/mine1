@@ -5,7 +5,7 @@ const server = require('../server'); // Импортируем переменн�
 module.exports = (req, res) => {
   try {
     // Получаем данные из глобальной переменной
-    const data = server.getData;
+    const data = server.getData();
 
     // Проверяем, что данные существуют
     if (!data) {
