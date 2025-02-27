@@ -1,24 +1,31 @@
-// /api/get1.js
+// /api/set1.js
 
-const mongoose = require('mongoose');
+const server = require('../server'); // Импортируем переменную и функции из server.js
 
 module.exports = (req, res) => {
-  const dbName = 'minecraftMod';  // Имя базы данных для проверки
+  try {
+    const data=server.storedData;//Получаем данные из глобальной переменно
+    server.setData(newData);// Устанавливаем новые данные с помощью setData
 
-  // Проверяем все базы данных на сервере
-  mongoose.connection.db.admin().listDatabases((err, result) => {
-    if (err) {
-      return res.status(500).json({ message: 'Ошибка при проверке базы данных' });
+    // Проверяем, что данные существуют
+    if(!data){
+      return res.status(200).json({ message: 'Данные не найдены' });
     }
 
-    // Ищем нужную базу данных в списке
-    const databases = result.databases;
-    const dbExists = databases.some(db => db.name === dbName);
+    // Логика обработки GET-запроса
+    const responseData = {
+      message: 'Информация о моде',
+      modDetails: {
+        message: 'Данные успешно получены',
+        storedData: data,
+      },
+    };
 
-    if (dbExists) {
-      res.status(200).json({ message: `База данных "${dbName}" существует!` });
-    } else {
-      res.status(404).json({ message: `База данных "${dbName}" не существует.` });
-    }
-  });
+    // Отправляем данные в виде JSON-ответа
+    return res.status(200).json(responseData);
+  } catch (error) {
+    // Обработка ошибок
+    console.error('Ошибка на сервере:', error);
+    return res.status(200).json({ message: 'Ошибка при обработке запроса' });
+  }
 };
